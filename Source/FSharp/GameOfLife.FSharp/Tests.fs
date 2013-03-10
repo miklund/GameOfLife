@@ -11,19 +11,16 @@ namespace ``1 Any live cell with fewer than two live neighbours dies as if cause
     open GameOfLife
 
     type ``Given a cell with no neighbours`` () =
-    
         [<Fact>]
         let ``when turn is run, the cell dies`` () =
             Run.next [0, 0] |> should equal List.empty<int * int>
 
     type ``Given two cells that are each other neighbours`` () =
-
         [<Fact>]
         let ``when turn is run, the cells dies`` () =
             Run.next [0, 0; 0, 1] |> should equal List.empty<int * int>
 
     type ``Given two cells that are not each other neighbours`` () =
-    
         [<Fact>]
         let ``when turn is run, the cells dies`` () =
             Run.next [0, 0; 0, 2] |> should equal List.empty<int * int>

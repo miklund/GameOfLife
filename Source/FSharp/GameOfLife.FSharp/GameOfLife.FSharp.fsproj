@@ -71,9 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library.fs" />
+    <Compile Include="Tests.fs" />
     <None Include="packages.config" />
     <None Include="app.config" />
-    <Compile Include="Tests.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
