@@ -1,11 +1,13 @@
 ﻿namespace GameOfLife
 
 module Run =
+    // get an area as a tuple array
     // area [-1..1] [-1..1] = [(-1, -1); (-1, 0); (-1, 1); (0, -1); (0, 0); (0, 1); (1, -1); (1, 0); (1, 1)]
-    let area xs ys = xs |> List.collect (fun x -> ys |> List.map (fun y -> x, y))
+    let private area xs ys = xs |> List.collect (fun x -> ys |> List.map (fun y -> x, y))
 
+    // get all neighbour coordinates surrounding a cell
     // neighbours (0, 0) = [(-1, -1); (-1, 0); (-1, 1); (0, -1); (0, 1); (1, -1); (1, 0); (1, 1)]
-    let neighbours cell = 
+    let private neighbours cell = 
         let x, y = cell
         // get area around cell
         area [x - 1..x + 1] [y - 1..y + 1] 
@@ -14,11 +16,11 @@ module Run =
 
     // intersection
     // neighbours (0, 0) |> live [0, 0; 0, 1; 1, 0] = [0, 1; 1, 0]
-    let live cells = List.filter (fun cell -> cells |> List.exists ((=) cell))
+    let private live cells = List.filter (fun cell -> cells |> List.exists ((=) cell))
 
     // difference
     // neighbours (0, 0) |> dead [0, 0; 0, 1; 1, 0] = [-1, -1; -1, 0; -1, 1; 0, -1; 1, -1; 1, 1]
-    let dead cells = List.filter (fun cell -> not (cells |>  List.exists ((=) cell)))
+    let private dead cells = List.filter (fun cell -> not (cells |>  List.exists ((=) cell)))
 
     // run next iteration of the game
     let next cells =
