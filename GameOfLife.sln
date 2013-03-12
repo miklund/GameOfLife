@@ -5,6 +5,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GameOfLife.FSharp", "Source
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GameOfLife.FSharp.App", "Source\FSharp\GameOfLife.FSharp.App\GameOfLife.FSharp.App.fsproj", "{2A408131-6E88-4C29-A881-04CD95DBFB9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLife.CSharp", "Source\CSharp\GameOfLife.CSharp\GameOfLife.CSharp.csproj", "{5D5BF336-5EFD-4B8C-819B-0B9D88AAAE2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{2A408131-6E88-4C29-A881-04CD95DBFB9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A408131-6E88-4C29-A881-04CD95DBFB9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A408131-6E88-4C29-A881-04CD95DBFB9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D5BF336-5EFD-4B8C-819B-0B9D88AAAE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5BF336-5EFD-4B8C-819B-0B9D88AAAE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5BF336-5EFD-4B8C-819B-0B9D88AAAE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5BF336-5EFD-4B8C-819B-0B9D88AAAE2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

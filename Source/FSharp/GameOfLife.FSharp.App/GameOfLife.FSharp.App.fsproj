@@ -52,6 +52,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CSharp\GameOfLife.CSharp\GameOfLife.CSharp.csproj">
+      <Name>GameOfLife.CSharp</Name>
+      <Project>{5d5bf336-5efd-4b8c-819b-0b9d88aaae2b}</Project>
+      <Private>True</Private>
+    </ProjectReference>
     <ProjectReference Include="..\GameOfLife.FSharp\GameOfLife.FSharp.fsproj">
       <Name>GameOfLife.FSharp</Name>
       <Project>{a41a4109-625b-4a50-a46c-a734ea7d23b6}</Project>
