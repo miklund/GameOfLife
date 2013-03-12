@@ -1,7 +1,6 @@
-﻿using NUnit.Framework;
-
-namespace GameOfLife.CSharp.Tests.Neighbours
+﻿namespace GameOfLife.CSharp.Tests.Neighbours
 {
+    using NUnit.Framework;
     using GameOfLife.CSharp;
 
     public class OfShould

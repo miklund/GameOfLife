@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
-
-namespace GameOfLife.CSharp.Tests.Game
+﻿namespace GameOfLife.CSharp.Tests.Game
 {
+    using NUnit.Framework;
     using GameOfLife.CSharp;
 
     public class NextShould
@@ -59,11 +53,11 @@ namespace GameOfLife.CSharp.Tests.Game
         }
 
         [Test]
-        public void GrowDeadCellWithThreeOrMoreLiveNeighbours()
+        public void GrowDeadCellWithThreeLiveNeighbours()
         {
-            // corners of 3x3 vector - grow cell in the middle
+            // a corner of cells like an L - grow cell in the intersection
             var middleCell = new Cell(0, 0);
-            var board = new[] { new Cell(-1, -1), new Cell(-1, 1), new Cell(1, -1), new Cell(1, 1) };
+            var board = new[] { new Cell(-1, -1), new Cell(-1, 1), new Cell(1, -1) };
 
             /* Setup */
             var game = new Game(board);

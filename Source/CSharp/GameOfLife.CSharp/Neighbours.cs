@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace GameOfLife.CSharp
+﻿namespace GameOfLife.CSharp
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
     public static class Neighbours
     {
         /// <summary>
@@ -25,7 +25,7 @@ namespace GameOfLife.CSharp
         }
 
         /// <summary>
-        /// Intersection
+        /// Intersection between cells and board (is live cells)
         /// </summary>
         public static IEnumerable<Cell> FilterLive(this IEnumerable<Cell> cells, IEnumerable<Cell> board)
         {
@@ -33,11 +33,8 @@ namespace GameOfLife.CSharp
         }
 
         /// <summary>
-        /// Difference
+        /// Difference between cells and board (is dead cells)
         /// </summary>
-        /// <param name="cells"></param>
-        /// <param name="board"></param>
-        /// <returns></returns>
         public static IEnumerable<Cell> FilterDead(this IEnumerable<Cell> cells, IEnumerable<Cell> board)
         {
             return cells.Where(cell => !board.Contains(cell));

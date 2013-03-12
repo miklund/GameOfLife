@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NUnit.Framework;
-
 namespace GameOfLife.CSharp.Tests.Neighbours
 {
+    using NUnit.Framework;
     using GameOfLife.CSharp;
 
     public class FilterDeadShould

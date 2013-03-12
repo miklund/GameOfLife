@@ -13,8 +13,14 @@
             Y = y;
         }
 
+        /// <summary>
+        /// X-coordinate of this cell
+        /// </summary>
         public int X { get; set; }
 
+        /// <summary>
+        /// Y-coordinate of this cell
+        /// </summary>
         public int Y { get; set; }
 
         public override string ToString()

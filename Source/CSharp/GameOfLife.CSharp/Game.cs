@@ -21,11 +21,17 @@
             this.board = new List<Cell>(board);
         }
 
+        /// <summary>
+        /// Current board
+        /// </summary>
         public IEnumerable<Cell> Board
         {
             get { return board; }
         }
 
+        /// <summary>
+        /// Get next turn of the game
+        /// </summary>
         public void Next()
         {
             lock (board)
